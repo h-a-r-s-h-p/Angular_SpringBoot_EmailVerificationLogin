@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Wisestep Login </title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="inner_container">
+            <h1> Welcome to Wisestep</h1>
+            <div class="container-fluid">
+                <form [formGroup]="userEmails" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>Please provide your email to login</label>
+                        <div class="input-box">
+                            <input placeholder="Enter Email" [class.is-invalid]="getEmail && getEmail.invalid && getEmail.touched" type="email"
+                                class="form-control" [(ngModel)]="emailAddr" formControlName="email" />
+                        </div>
+                        <small *ngIf="isShown" id="errorMess" class="text-danger">
+                            The email does not exist. Please try again.
+                        </small>
+                        <div *ngIf="getEmail && ((getEmail.invalid && getEmail.touched) || getEmail.dirty)">
+                            <small *ngIf="getEmail && getEmail.errors?.['required']" class="text-danger">
+                                Email is required.
+                            </small>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success" type="submit">Login</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
