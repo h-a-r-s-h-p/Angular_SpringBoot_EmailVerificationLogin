@@ -6,3 +6,6 @@ Make separate github repositories for Angular application and Spring Boot applic
 Then spring boot application can be deployed simply.
 But to deploy Angular application, follow:
 https://www.javaguides.net/2020/11/how-to-deploy-angular-application-to-heroku.html
+
+## Aplication URL
+https://angular-wisestep.herokuapp.com/
