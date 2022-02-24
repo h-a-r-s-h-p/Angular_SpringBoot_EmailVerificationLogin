@@ -7,7 +7,7 @@ import javax.naming.directory.*;
 
 import org.springframework.stereotype.Service;
 
-@Service
+@Service                                                            //This is neccessary to mention of service class
 public class DomainService implements DomainExistInterface {
 
     public String getDomain(String emailAddr){
@@ -22,7 +22,7 @@ public class DomainService implements DomainExistInterface {
         return domain;
     }
 
-    public int checkIfDomainExist( String hostName ) throws NamingException {
+    public int checkIfDomainExist( String hostName ) throws NamingException {          // I copy pasted it to check if the domain of the email address provided exist or not
         Hashtable env = new Hashtable();
         env.put("java.naming.factory.initial",
                 "com.sun.jndi.dns.DnsContextFactory");
