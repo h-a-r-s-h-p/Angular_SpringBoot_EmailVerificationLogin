@@ -1,11 +1,9 @@
-## Tutorial to create a  Angular spring-Boot  full stack application
-https://www.youtube.com/watch?v=G46fjVzQ7BQ
+## To run the server
+Clone the repository and run the command mvn spring-boot:run
 
-## Deployment
-Make separate github repositories for Angular application and Spring Boot application.
-Then spring boot application can be deployed simply.
-But to deploy Angular application, follow:
-https://www.javaguides.net/2020/11/how-to-deploy-angular-application-to-heroku.html
+## system.properties
+This file is added because it was giving the error:
+Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project Backend: Fatal error compiling: invalid target release: 11 while heroku deployment
 
-## Aplication URL
-https://angular-wisestep.herokuapp.com/
+## deployed link
+https://spring-boot-wisestep.herokuapp.com/all
